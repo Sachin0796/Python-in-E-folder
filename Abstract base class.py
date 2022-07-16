@@ -8,7 +8,7 @@ class Shape(metaclass=ABCMeta):         # Syntax B line 2
     def printArea(self):
         return 0
 
-class Rectangle(Shape):
+class Rectangle(Shape): 
     def __init__(self):
         self.length=6
         self.breadth=7
