@@ -1,0 +1,3 @@
+this is a sample file
+for testing purpose
+of the file IO operations.

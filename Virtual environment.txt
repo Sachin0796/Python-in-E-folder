@@ -1,0 +1,24 @@
+Virtual Environment
+
+Any changes made in the packages in main system will not be reflected in the versions of the packages present in the virtual environment.
+
+Commands for setting up virtual environment:
+1. Install the module:
+	pip install virtualenv
+2. Create the virtual environment which will be fresh env without any pre-installed packages:
+	virtualenv sachin
+3. activate the virtualenv:
+	./sachin/Scritps/activate
+4. If the command in 3rd points gives error, then set the executionpolicy remotesigned as yes:
+	set-executionpolicy remotesigned and then enter y
+
+5. Again run the command at point 3 to activate and enter in the virtual env.
+6. Here we have the python installed which is fresh and independent of the python present outside of our virtual environment.
+
+7. We can get the list of all the packages installed in our virtual environment:
+	pip freeze > requirements.txt
+8. If we want to install all the packages with same version as given in requirements.txt:
+	pip install -r ./requirements.txt
+	
+9. If we need that our virtualenv has all the packages as in our main system:
+	virtualenv --system-site-packages sachin2
