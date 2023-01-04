@@ -8,7 +8,7 @@ class Employee:
         print(f"Name is {self.name} and salary is {self.salary}")
 
 obj_1=Employee()
-obj_1.name="Name_1"
+obj_1.name="Name_A"
 obj_1.salary="XXXXX"
 obj_1.print_details()# here the object name obj_1 is automatically assigned to the "self" of the function print_details. so the details are fetched
 # from the object obj_1 while printing in print_details.
@@ -20,8 +20,8 @@ In the above example, we have to manually set the values to the parameters of th
 class Employee:
 
     def __init__(self,aname,asalary):
-        self.name=aname
-        self.salary=asalary
+        self.name=aname # instance variables
+        self.salary=asalary # instance variables
     def print_details(self):
         print(f"Name is {self.name} and salary is {self.salary}")
 

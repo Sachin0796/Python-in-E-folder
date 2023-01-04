@@ -17,6 +17,6 @@ class Employee:
         # return cls(params[0], params[1])
         return cls(*string.split(",")) # This is the one liner code for the above two lines
 
-sachin=Employee.from_string("sachin,30000")
+sachin=Employee.from_string("sachin,100")
 print(sachin.name)
 print(sachin.salary)

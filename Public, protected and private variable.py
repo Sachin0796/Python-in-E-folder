@@ -15,6 +15,5 @@ class Employee:
 
 sachin=Employee("sachin","30000")
 print(sachin._protec)
-# print(sachin.__private_var) # This print will give error as python make sure that we dont use this variable outside the class so it has changed the way we can access the private variable. This is known as name mangling. Python saves the private variables by adding "_classname" as prefix
-
+# print(sachin.__private_var) # This print will give error as python make sure that we don't use this variable outside the class so it has changed the way we can access the private variable. This is known as name mangling. Python saves the private variables by adding "_classname" as prefix
 print(sachin._Employee__private_var)

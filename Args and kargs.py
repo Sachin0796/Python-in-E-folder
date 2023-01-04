@@ -1,5 +1,5 @@
 # args and kwargs - These are used to pass any number of arguments to a function.
-#If we have multiple types of arguments in a function that we pass to function like normal arguments, then args and then kwargs, then we have to follow the convention as:
+#If we have multiple types of arguments in a function that we pass to function like normal arguments, then args and then kwargs, then we have to follow the order as:
 # -->>normal,args,kwargs
 
 def funargs(normal,*check,**kwDetails):

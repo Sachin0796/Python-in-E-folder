@@ -25,4 +25,4 @@ class Employee:
 
 sachin=Employee("sachin","30000")
 sachin.printgood()
-
+Employee.printgood()
