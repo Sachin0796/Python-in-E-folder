@@ -1,0 +1,36 @@
+# from flask import Flask
+# from flask_sqlalchemy import SQLAlchemy
+# from datetime import datetime
+
+from sqlalchemy import create_engine, Column, Integer, String
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
+
+engine = create_engine('oracle://HR:hr123@localhost/orcl1', echo=False)
+Session = sessionmaker(bind=engine)
+session = Session()
+
+Base = declarative_base()
+
+class Student(Base):
+    __tablename__ = 'student'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String(50))
+    age = Column(Integer)
+    grade = Column(String(50))
+
+Base.metadata.create_all(engine)
+
+
+# app=Flask(__name__)
+# app.config['SQLALCHEMY_DATABASE_URI']='oracle://HR:hr123@localhost/orcl1'
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# db = SQLAlchemy(app)
+
+# class User(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     name = db.Column(db.String(50))
+#     email = db.Column(db.String(80), unique=True)
+#     date_joined = db.Column(db.Date, default=datetime.utcnow)
