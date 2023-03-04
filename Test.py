@@ -34,29 +34,38 @@
 
 
 
-direction='LRRLRL'
-ans=[0]*2
-ans[0] = 0
-ans[1] = 2**len(direction)
-ansList=[]
-def returnTemp(direction):
-        for i in range(len(direction)):
-            yield (ans[0] + ans[1])//2
+# direction='LRRLRL'
+# ans=[0]*2
+# ans[0] = 0
+# ans[1] = 2**len(direction)
+# ansList=[]
+# def returnTemp(direction):
+#         for i in range(len(direction)):
+#             yield (ans[0] + ans[1])//2
 
-def findNumberSequence(direction):    
-    mydict=dict()     
-    index=0       
-    rt=returnTemp(direction)
-    for i in rt:
-        mydict[index] = i
+# def findNumberSequence(direction):    
+#     mydict=dict()     
+#     index=0       
+#     rt=returnTemp(direction)
+#     for i in rt:
+#         mydict[index] = i
         
-        if direction[index] == 'L':
-            ans[1] = i
-        elif direction[index] == 'R':
-            ans[0] = i        
-        index+=1                                
-    for i in sorted(mydict.values()):
-        ansList.append(list(mydict.values()).index(i)+1)    
+#         if direction[index] == 'L':
+#             ans[1] = i
+#         elif direction[index] == 'R':
+#             ans[0] = i        
+#         index+=1                                
+#     for i in sorted(mydict.values()):
+#         ansList.append(list(mydict.values()).index(i)+1)    
 
-findNumberSequence(direction)
-print(ansList)
+# findNumberSequence(direction)
+# print(ansList)
+
+# import time
+
+from datetime import datetime
+# seconds
+ts = 1540146600.0
+# convert seconds to datetime
+dt = datetime.fromtimestamp(ts)
+print("datetime is:", dt)
