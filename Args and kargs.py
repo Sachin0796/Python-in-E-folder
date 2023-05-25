@@ -4,6 +4,7 @@
 
 def funargs(normal,*check,**kwDetails):
     print(normal)
+    print("kwDetails:", kwDetails)
     print("Normal value at index 1:",check[1])
     for i in check:
         print(i)
@@ -21,3 +22,8 @@ kw={"Sachin":"IT Professional","Soniya":"Marketing Manager","Sunita":"HouseWife"
 funargs(normal1,*list1,**kw)
 # passes the list "list1" as a tuple to the function funargs
 
+
+str="as,cd"
+str1=str.replace(",","")
+print(str1)
+print("44,666".replace(",","").isnumeric())

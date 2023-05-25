@@ -9,5 +9,6 @@ def desiging_function(func1):
 def func1():
     print("Function called")
 
-# func1=desiging_function(func1)        # Way 2
 func1()
+
+# func1=desiging_function(func1)        # Way 2

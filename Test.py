@@ -69,3 +69,20 @@ ts = 1540146600.0
 # convert seconds to datetime
 dt = datetime.fromtimestamp(ts)
 print("datetime is:", dt)
+
+redirectFilename = '/home/nbusers/gdcplvc0661.dccpapa0002.imsi.com.nbujob.jobs.3uzs0o12.ssh'
+redirectFilename = '.'.join(redirectFilename.split(".")[:-2])+ "." + redirectFilename.split(".")[-1] 
+print(redirectFilename)
+
+class test:
+    def testingParam(self, var1=1, var2=2, var3=3):
+        print("var1: ", var1)
+        print("var2: ", var2)
+        print("var3: ", var3)
+    
+
+
+
+obj=test()
+obj.testingParam([1,2,3], var3="sachin")
+print(list(['']))
