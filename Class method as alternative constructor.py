@@ -6,11 +6,7 @@ class Employee:
         self.salary=asalary
     def print_details(self):
         print(f"Name is {self.name} and salary is {self.salary}")
-
-    @classmethod
-    def change_leaves(cls,new_leaves):
-        cls.no_of_leaves=new_leaves
-
+  
     @classmethod
     def from_string(cls,string):
         # params=string.split("-")

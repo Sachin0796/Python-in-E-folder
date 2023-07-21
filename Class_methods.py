@@ -1,5 +1,5 @@
 """ If we want to change the class variable using its instance or class itself, then we use classMethod. classMethod
-takes the class name as an input and not the object name(self) and changes the value of the class level variable directly.
+takes the class name - "cls" as an input and not the object name - "self" and changes the value of the class level variable directly.
 """
 
 class Employee:

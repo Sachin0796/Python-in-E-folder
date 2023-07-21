@@ -11,7 +11,7 @@ class Employee:
 
 class Programmer(Employee):
     no_of_leaves = 56
-    def __init__(self, aname, asalary,language):
+    def __init__(self, aname, asalary, language):
         self.name = aname
         self.salary = asalary
         self.languages=language
