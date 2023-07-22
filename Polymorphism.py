@@ -18,7 +18,7 @@ Here we will see when which variable will be called. Python checks the variable 
 # A=A()
 # B=B()
 # print(B.classVar1)
-
+# print("\n")
 # Case 2 - Changed the name of the class variable in class B from classVar2 to classVar1
 
 # class A:
@@ -32,10 +32,10 @@ Here we will see when which variable will be called. Python checks the variable 
 # A=A()
 # B=B()
 # print(B.classVar1)
-
+# print("\n")
 # Case 3 - Multiple variables in different class
 
-# If we comment the class C's instance variable classVar1 then its class variable will be printed. If we comment both variables in class C, then class variable of class B will be printed not the instance variable of class B. This is because the constructor is now overwritten so it wont be called and class variables of class B will be found in the child class C.
+# If we comment class C's instance variable classVar1, then its class variable will be printed. If we comment both variables in class C, then class variable of class B will be printed, not the instance variable of class B. This is because the constructor is now overwritten so it wont be called and class variables of class B will be found in child class C.
 
 # class A:
 #     classVar1 = "I am a class variable in class A"  # class variable
@@ -60,7 +60,7 @@ Here we will see when which variable will be called. Python checks the variable 
 # B = B()
 # C = C()
 # print(C.classVar1)
-
+# print("\n")
 # Case 4 - Use of super keyword for calling constructor
 
 # If we want to call the constructor of base class then we can use super keyword. "Super" is used here to call the overwritten constructor of super class. It also depends where the super is being used as it will impact the values of the same variables present in both the classess. In our example, we will see the difference in the values of the var1 and classVar1 when super is called at line 79 and 82
@@ -83,27 +83,27 @@ Here we will see when which variable will be called. Python checks the variable 
 # A = A()
 # B = B()
 # print(B.special," **** ",B.classVar1," **** ",B.var1)
-
+# print("\n")
 # If we call the super at line 79. Then the values of var1 and classVar1 will be overwritten by constructor in class B.
 # If we call the super at line 82. Then the values of var1 and classVar1 will be overwritten by constructor in class A.
 
-# Case 5 - Use of super keyword for accessing class variable of super class
+# Case 5 - Use of super keyword for accessing ONLY class variable of super class. Instance varaible can't be accessed using super like below.
 # Here, super is used to call the class variable of super class, its not fetching the instance variable of super class bcz constructor is overwritten.
+# print("\n")
+# class A:
+#     classVar1 = "I am a class variable in class A"  # class variable
+#     def __init__(self):
+#         self.var1 = "I am inside class A's constructor"  # instance variable
+#         self.classVar1 = "Instance variable in class A"  # instance variable
+#         self.special="Special variable for child class B"
 
-class A:
-    classVar1 = "I am a class variable in class A"  # class variable
-    def __init__(self):
-        self.var1 = "I am inside class A's constructor"  # instance variable
-        self.classVar1 = "Instance variable in class A"  # instance variable
-        self.special="Special variable for child class B"
-
-class B(A):
-    classVar1 = "I am a class variable in class B"
-    def __init__(self):
-        super().__init__()
-        self.var1 = "I am inside class B's constructor"  # instance variable
-        self.classVar1 = "Instance variable in class B"  # instance variable
-        print(super().classVar1) #VIMP
-A = A()
-B = B()
-print(B.special,"/",B.classVar1," / ",B.var1)
+# class B(A):
+#     classVar1 = "I am a class variable in class B"
+#     def __init__(self):
+#         super().__init__()
+#         self.var1 = "I am inside class B's constructor"  # instance variable
+#         self.classVar1 = "Instance variable in class B"  # instance variable
+#         print(super().classVar1) #VIMP
+# A = A()
+# B = B()
+# print(B.special,"\n",B.classVar1,"\n",B.var1)
