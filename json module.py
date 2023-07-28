@@ -20,13 +20,13 @@ import json
 # dumps
 data2 = {
     "name": "sachin",
-    (1,2): "check",
+    # (1,2): "check",
     "fridge": 1,
-    "status": False,
-    6:float('nan')
+    "status": False
+    # ,6:float('nan')
        }
 print(type(data2))
-jscomp=json.dumps(data2, skipkeys=True,allow_nan=True, indent = 1,separators =(" | ", " = "))
+jscomp=json.dumps(data2, indent = 1)
 print(jscomp)
 print(type(jscomp))
 # print(jscomp["fridge"])

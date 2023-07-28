@@ -24,10 +24,10 @@ def test():
     def test2():
         global x
         x=50
-        print("after calling test2",x)
+        print("In calling test2",x)
     print("before calling tes2",x)
     test2()
-    print("after calling test",x)
+    print("after calling test2",x)
 test()
 print("after calling test",x)
 # This happened because when we use the keyword "global", then the function will try to find the variable at the top of the program before all the functions. In our case, x=20 is not the global variable, its local to the function test(), so even if we use global in test2(),it won't change the value of x in test(), hence value remains unchanged.
