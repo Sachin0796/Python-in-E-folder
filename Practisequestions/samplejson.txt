@@ -1,0 +1,20 @@
+stores = [
+    {
+		"name": "Store_1",
+		"items":[
+			{
+				"item1": "mobile",
+				"item2": "laptop"
+			}
+		]
+	},
+	{
+		"name": "Store_2",
+		"items":[
+			{
+				"item1": "bread",
+				"item2": "butter"
+			}
+		]
+	}
+]
