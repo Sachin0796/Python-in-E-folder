@@ -1,5 +1,6 @@
 #Dictionary is key value pair
-my_dict={1:2,"Harry":"Burger",
+my_dict={1:2,
+         "Harry":"Burger",
          "Sachin":"Chicken",
          "Shubham":{
                      "B":"Nashta",
@@ -8,7 +9,7 @@ my_dict={1:2,"Harry":"Burger",
                     }
          }
 print(my_dict["Shubham"]["B"])
-my_dict["Ankit"]="Junk Food" #this is same as update function
+my_dict["Rahul"]="Junk Food" #this is same as update function
 print(my_dict)
 my_dict[420]="Kababs"
 print(my_dict)

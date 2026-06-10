@@ -15,5 +15,3 @@ for user in reader:
     print(user)
 reader.close()
 
-ls=[i for i in range(0,20) if all(i%y for y in range(2,i//2)) ]
-print(ls)

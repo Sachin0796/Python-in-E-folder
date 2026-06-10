@@ -10,7 +10,7 @@ def searcher():
         if text in book:
             print("Word found")
         else:
-            print("Word not found")
+            print("Word not found")                 
 
 search=searcher()
 print("Reading book from memory")

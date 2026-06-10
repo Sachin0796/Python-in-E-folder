@@ -1,4 +1,4 @@
-arr = ['Sach96in', 'sd48s','asf866ds','sdad789789sd','erds27dfd','sa1as']
+arr = ['Sach96in', 'sd48s','asf866ds','sdad789789sd','erds27dfd','789saas']
 number_list=['1','2','3','4','5','6','7','8','9','0']
 arr_size=[]
 my_dict={}

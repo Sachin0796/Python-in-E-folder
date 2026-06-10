@@ -18,7 +18,6 @@ content = fp.read()
 print(content ,"\n")
 fp.close()
 
-
 fp = open("sample.txt","rb")
 #fp = open("sample.txt")
 # fp is the file pointer which is being returned by open function
